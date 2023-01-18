@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day2 Interview</title>
+    <style>
+      h3 {
+        color: red;
+      }
+      hr {
+        border-style: ridge;
+        border-color: black;
+        border-radius: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center; background-color: black; color: white">
+      Node.js Interview Day2
+    </h1>
+
+    <hr />
+    <h3>1) Explain CORS, Implement CORS.</h3>
+    <blockquote>
+      : (Cross-Origin Resource Sharing) is a mechanism by which data or any
+      other resource of a site could be shared intentionally to a third party
+      website when there is a need. Generally, access to resources that are
+      residing in a third party site is restricted by the browser clients for
+      security purposes.
+    </blockquote>
+    <h4>Implemention :</h4>
+    <blockquote>
+      <pre>
+                const cors = require("cors")
+                app.use(cors())
+                app.get('/default',defau,(req,res)=>{
+                console.log("default")
+                 })
+            </pre
+      >
+    </blockquote>
+    <hr />
+
+    <h3>
+      2) What is Express. how it helps you to create a backend application
+    </h3>
+    <blockquote>
+      <ul>
+        <li><h4>Express :</h4></li>
+        <blockquote>
+          Express is a small framework that sits on top of Node.js’s web server
+          functionality to simplify its APIs and add helpful new features. It
+          makes it easier to organize your application’s functionality with
+          middleware and routing. It adds helpful utilities to Node.js’s HTTP
+          objects. It facilitates the rendering of dynamic HTTP objects.
+        </blockquote>
+        <li>More features than Node.js</li>
+        <br />
+        <li>
+          It is used to build web-apps using approaches and principles of
+          Node.js.
+        </li>
+        <br />
+        <li>Routing is provided.</li>
+        <br />
+        <li>It requires less coding time.</li>
+        <br />
+        <li>
+          Uses middleware for the arrangement of functions systematically
+          server-side
+        </li>
+        <br />
+        <h4>import by const express = require ("express")</h4>
+      </ul>
+    </blockquote>
+
+    <hr />
+    <h3>3) How do you create a simple Express.js application ?</h3>
+    <blockquote>
+      <pre>
+       const express = require('express')
+       const server=express();
+       server.get(“/” , (req, res) =>{
+        res.send(“Hello!”);
+        })
+        server.listen(3000, () =>{
+        console.log(“server is running at port:3000”);
+        })
+        
+    </pre
+      >
+    </blockquote>
+
+    <hr />
+    <h3>4) Implementation of all type of exports in backend application</h3>
+    <blockquote>
+      <pre>
+    function defau(req,res){
+        res.send("default exports")
+        }
+        function named(req,res) {
+        res.send('named exports')
+        }
+        module.exports = default;//default export
+        module.exports = {named};//named export
+        
+</pre
+      >
+    </blockquote>
+
+    <hr />
+    <h3>5) Explain min 5 status codes gets used in Backend development</h3>
+    <blockquote>
+      <ul>
+        <li>
+          An HTTP status code is a message a website's server sends to the
+          browser to indicate whether or not that request can be fulfilled.
+          Status codes specs are set by the W3C. Status codes are embedded in
+          the HTTP header of a page to tell the browser the result of its
+          request.
+        </li>
+        <br />
+        <li>102 PROCESSING</li>
+        <br />
+        <li>Processing 200 OK OK</li>
+        <br />
+        <li>400 BAD_REQUEST Bad Request</li>
+        <br />
+        <li>401 UNAUTHORIZED Unauthorized</li>
+        <br />
+        <li>402 PAYMENT_REQUIRED Payment Required</li>
+        <br />
+        <li>403 FORBIDDEN Forbidden</li>
+        <br />
+        <li>404 NOT_FOUND Not Found</li>
+        <br />
+        <li>500 INTERNAL_SERVER_ERROR Internal Server Error</li>
+        <br />
+        <li>503 - Service Unavailable</li>
+        <br />
+      </ul>
+    </blockquote>
+
+    <hr />
+    <h3>6) Difference between HTTP and HTTPS</h3>
+    <blockquote>
+      <ul>
+        <li>
+          HTTPS is HTTP with encryption. The only difference between the two
+          protocols is that HTTPS uses TLS (SSL) to encrypt normal HTTP requests
+          and responses.
+        </li>
+        <br />
+        <li>As a result, HTTPS is far more secure than HTTP</li>
+        <br />
+        <li>
+          A website that uses HTTP has http:// in its URL, while a website that
+          uses HTTPS has https://. Some difference of http and https;
+        </li>
+        <br />
+      </ul>
+    </blockquote>
+
+    <hr />
+    <h3>7) What are JWT tokens?</h3>
+    <blockquote>
+      <ul>
+        <li>
+          JSON web token (JWT), pronounced "jot", is an open standard (RFC 7519)
+          that defines a compact and self-contained way for securely
+          transmitting information between parties as a JSON object.
+        </li>
+        <br />
+        <li>
+          Again, JWT is a standard, meaning that all JWTs are tokens, but not
+          all tokens are JWTs. when we logged-in somewhere , they provide us a
+          unique token.which helps us to access through it token is provided
+          only when the registered data and login data are matching.
+          Ex:-facebook
+        </li>
+      </ul>
+    </blockquote>
+    <hr />
+    <div style="text-align: center">💥💥💥💥💥💥🥈</div>
+    <hr />
+  </body>
+</html>
